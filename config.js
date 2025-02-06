@@ -30,35 +30,6 @@ window.CONFIG = {
     },
     {
       category: 'Communication',
-      name: 'Telegram',
-      icon: 'telegram',
-      url: 'http://t.me',
-      normalisedURL: 't.me',
-      triggers: [
-        'm',
-        'tm',
-        'tg',
-        'teleg',
-        'telega',
-        'telegram'
-      ],
-      key: 'KeyM',
-      commands: {
-        go: {
-          template: '{@}/{$}'
-        }
-      },
-      bgColor: {
-        type: 'gradient',
-        gradientType: 'radial',
-        colors: ['#29aaed', '#25a4e2'],
-        stops: [40, 100]
-      },
-      textColor: '#fff',
-      pinned: true
-    },
-    {
-      category: 'Communication',
       name: 'Snapchat',
       icon: 'snapchat',
       url: 'http://web.snapchat.com',
@@ -71,7 +42,7 @@ window.CONFIG = {
         'snpcht',
         'snapchat'
       ],
-      key: 'KeyM',
+      key: 'KeyS',
       commands: {
         go: {
           template: '{@}/{$}'
@@ -179,7 +150,7 @@ window.CONFIG = {
         'stack',
         'stackoverflow'
       ],
-      key: 'KeyS',
+      key: 'KeyT',
       commands: {
         search: {
           template: '{@}/search?q={$}'
@@ -229,7 +200,6 @@ window.CONFIG = {
         't',
         'translate'
       ],
-      key: 'KeyT',
       commands: {
         search: {
           template: '{@}/?text={$}',
@@ -323,40 +293,14 @@ window.CONFIG = {
       pinned: true
     },
     {
-      category: 'Social',
-      name: 'Twitch',
-      icon: 'twitch',
-      url: 'https://twitch.tv',
-      normalisedURL: 'twitch.tv',
-      triggers: [
-        'tw',
-        'twitch',
-      ],
-      commands: {
-        search: {
-          template: '{@}/search?term={$}'
-        },
-        go: {
-          template: '{@}/{$}'
-        }
-      },
-      bgColor: {
-        type: 'solid',
-        color: '#8c44f7'
-      },
-      textColor: '#000',
-      pinned: true
-    },
-    {
       category: 'Entertainment',
       name: 'Netflix',
       triggers: [
-        'n',
+        'net',
         'nf',
         'nfx',
         'netflix',
       ],
-      key: 'KeyN',
       icon: 'netflix',
       url: 'https://media.netflix.com',
       normalisedURL: 'netflix.com',
@@ -370,60 +314,6 @@ window.CONFIG = {
         color: '#000'
       },
       textColor: '#da0813',
-      pinned: true
-    },
-    {
-      category: 'Social',
-      name: 'Twitter',
-      icon: 'twitter',
-      url: 'https://twitter.com',
-      normalisedURL: 'twitter.com',
-      triggers: [
-        'tt',
-        'twt',
-        'twit',
-        'twitt',
-        'twitter'
-      ],
-      commands: {
-        search: {
-          template: '{@}/search?q={$}'
-        },
-        go: {
-          template: '{@}/{$}'
-        }
-      },
-      bgColor: {
-        type: 'solid',
-        color: '#1c99e6'
-      },
-      textColor: '#e8e8e8',
-      pinned: true
-    },
-    {
-      category: 'Work',
-      name: 'Linkedin',
-      icon: 'linkedin',
-      key: 'KeyL',
-      triggers: [
-        'l',
-        'lk',
-        'li',
-        'linked',
-        'linkedin'
-      ],
-      url: 'https://linkedin.com',
-      normalisedURL: 'linkedin.com',
-      commands: {
-        search: {
-          template: '{@}/search/results/all/?keywords={$}'
-        }
-      },
-      bgColor: {
-        type: 'solid',
-        color: '#0077b7'
-      },
-      textColor: '#fff',
       pinned: true
     },
     {
@@ -484,14 +374,14 @@ window.CONFIG = {
         'note',
         'not',
       ],
-      icon: 'gdrive',
-      url: 'https://drive.google.com',
-      normalisedURL: 'drive.google.com',
+      icon: 'notion',
+      url: 'https://notion.so',
+      normalisedURL: 'notion.so',
       bgColor: {
         type: 'gradient',
         angle: 70,
         gradientType: 'linear',
-        colors: ['#2684fc', '#00ac47', '#ffba00']
+        colors: ['#222222', '#333333', '#000000'] // Dark gray to black
       },
       textColor: '#fff',
       pinned: true
@@ -547,111 +437,192 @@ window.CONFIG = {
       pinned: true
     },
     {
-      category: 'Work',
-      name: 'Slack',
-      icon: 'slack',
+      category: 'Productivity',
+      name: 'Google Keep',
+      icon: 'gkeep',
       triggers: [
-        'sl',
-        'slack'
+        'ke',
+        'keep',
+        'google keep'
       ],
-      url: 'https://app.slack.com',
-      normalisedURL: 'slack.com',
+      url: 'https://keep.google.com',
+      normalisedURL: 'keep.google.com',
       bgColor: {
         type: 'gradient',
+        angle: 70,
         gradientType: 'linear',
-        angle: -200,
-        colors: ['#d6abb9', '#e6d7b8', '#bce2eb', '#8db0a4']
+        colors: ['#FBBC04', '#FEEA83', '#FFD600'] // Warm yellow gradient
       },
-      textColor: '#00bd6d',
+      textColor: '#000',
+      pinned: true
     },
     {
-      category: 'Social',
-      name: 'VK',
+      category: 'Ultimate',
+      name: '2FAuth',
+      icon: '2fauth',
       triggers: [
-        'v',
-        'vk',
-        'vkontakte',
+        '2fa',
+        '2fauth'
       ],
-      url: 'https://vk.com',
-      normalisedURL: 'vk.com',
-      commands: {
-        go: {
-          template: '{@}/{$}',
-          description: 'go to'
-        },
-        search: {
-          template: '{@}/search?c%5Bq%5D={$}&c%5Bsection%5D=auto'
-        }
-      },
+      url: 'https://2fauth.kmnet.uk',
+      normalisedURL: '2fauth.kmnet.uk',
       bgColor: {
         type: 'gradient',
+        angle: 70,
         gradientType: 'linear',
-        colors: ['#0077ff', '#0033ff']
-      },
-      textColor: '#e8e8e8'
+        colors: ['#2C2C2C', '#3B3B3B', '#4A4A4A'] // Dark gray gradient
+      },      
+      textColor: '#000',
+      pinned: true
     },
     {
-      category: 'Search',
-      name: 'DuckDuckGo',
+      category: 'Ultimate',
+      name: 'Management',
+      icon: 'dockge',
       triggers: [
-        'dd',
-        'ddg',
-        'duck',
-        'duckduck',
-        'duckduckgo'
+        'man',
+        'manage'
       ],
-      url: 'https://duckduckgo.com',
-      normalisedURL: 'duckduckgo.com',
-      commands: {
-        search: {
-          template: '{@}/?q={$}'
-        }
-      },
-      bgColor: {
-        type: 'solid',
-        color: '#e37151'
-      },
-      textColor: '#e8e8e8'
-    },
-    {
-      category: 'Search',
-      name: 'Bing',
-      triggers: [
-        'b',
-        'bing',
-      ],
-      url: 'https://www.bing.com',
-      normalisedURL: 'bing.com',
-      commands: {
-        search: {
-          template: '{@}/search?q={$}'
-        }
-      },
+      url: 'https://manage.kmnet.uk',
+      normalisedURL: 'manage.kmnet.uk',
       bgColor: {
         type: 'gradient',
+        angle: 70,
         gradientType: 'linear',
-        colors: ['#3ab0f1', '#2351dd', '#40d1da']
-      },
-      textColor: '#e8e8e8'
+        colors: ['#2C2C2C', '#3B3B3B', '#4A4A4A'] // Dark gray gradient
+      },      
+      textColor: '#000',
+      pinned: true
     },
     {
-      category: 'Search',
-      name: 'Yandex',
+      category: 'Ultimate',
+      name: 'Dashboard',
+      icon: 'dash',
       triggers: [
-        'ya',
-        'yandex'
+        'dash',
+        'dashboard'
       ],
-      url: 'https://ya.ru',
-      normalisedURL: 'ya.ru',
-      commands: {
-        search: {
-          template: '{@}/search/?text={$}'
-        }
-      },
+      url: 'https://dashboard.kmnet.uk',
+      normalisedURL: 'dashboard.kmnet.uk',
       bgColor: {
-        type: 'solid',
-        color: '#fc3f1d'
-      },
+        type: 'gradient',
+        angle: 70,
+        gradientType: 'linear',
+        colors: ['#2C2C2C', '#3B3B3B', '#4A4A4A'] // Dark gray gradient
+      },      
+      textColor: '#000',
+      pinned: true
+    },
+    {
+      category: 'School',
+      name: 'eQE',
+      icon: 'eqe',
+      triggers: [
+        'eqe',
+        'e'
+      ],
+      url: 'https://eqe.fireflycloud.net',
+      normalisedURL: 'eqe.fireflycloud.net',
+      bgColor: {
+        type: 'gradient',
+        angle: 70,
+        gradientType: 'linear',
+        colors: ['#D32F2F', '#7A7A7A', '#3B3B3B'] // Red to dark gray
+      },           
+      textColor: '#000',
+      pinned: true
+    },
+    {
+      category: 'Productivity',
+      name: 'Todoist',
+      icon: 'todoist',
+      triggers: [
+        'todo',
+        'todoist'
+      ],
+      url: 'https://todoist.com',
+      normalisedURL: 'todoist.com',
+      bgColor: {
+        type: 'gradient',
+        angle: 70,
+        gradientType: 'linear',
+        colors: ['#D32F2F', '#7A7A7A', '#3B3B3B'] // Red to dark gray
+      },           
+      textColor: '#000',
+      pinned: true
+    },
+    {
+      category: 'Communication',
+      name: 'Beeper',
+      icon: 'beeper',
+      triggers: [
+        'bee',
+        'beeper'
+      ],
+      url: 'https://chat.beeper.com',
+      normalisedURL: 'chat.beeper.com',
+      bgColor: {
+        type: 'gradient',
+        angle: 70,
+        gradientType: 'linear',
+        colors: ['#7551E9', '#4A90E2', '#1E1E1E'] // Purple to blue to dark gray
+      },                
+      textColor: '#000',
+      pinned: true
+    },
+    {
+      category: 'Ultimate',
+      name: 'Valentine',
+      icon: 'heart',
+      triggers: [
+        'val',
+        'valentine'
+      ],
+      url: 'https://valentines.advent.cards.kh.kmnet.uk',
+      normalisedURL: 'valentines.advent.cards.kh.kmnet.uk',
+      bgColor: {
+        type: 'gradient',
+        angle: 70,
+        gradientType: 'linear',
+        colors: ['#D32F2F', '#FF9800', '#1C1C1C'] // Red, orange, and dark gray
+      },                  
+      textColor: '#000'
+    },
+    {
+      category: 'School',
+      name: 'Teams',
+      icon: 'teams',
+      triggers: [
+        'teams',
+        'te'
+      ],
+      url: 'https://teams.microsoft.com',
+      normalisedURL: 'teams.microsoft.com',
+      bgColor: {
+        type: 'gradient',
+        angle: 70,
+        gradientType: 'linear',
+        colors: ['#6264A7', '#1D4D6D', '#00A4A6'] // Purple, teal, and blue gradient
+      },                    
+      textColor: '#000'
+    },
+    {
+      category: 'Productivity',
+      name: 'Docs',
+      icon: 'gdocs',
+      triggers: [
+        'd',
+        'do',
+        'docs'
+      ],
+      url: 'https://docs.google.com',
+      normalisedURL: 'docs.google.com',
+      bgColor: {
+        type: 'gradient',
+        angle: 70,
+        gradientType: 'linear',
+        colors: ['#4285F4', '#34A853', '#FBBC05'] // Blue, green, yellow gradient
+      },                
       textColor: '#000'
     },
   ],
@@ -702,84 +673,6 @@ window.CONFIG = {
         },
         currency: {
           template: 'https://duckduckgo.com/?q={@}'
-        }
-      }
-    },
-    yandex: {
-      name: 'Yandex',
-      bgColor: {
-        type: 'solid',
-        color: '#fc3f1d'
-      },
-      textColor: '#000',
-      types: {
-        query: {
-          template: 'https://ya.ru/search/?text={$}'
-        },
-        calculator: {
-          template: 'https://ya.ru/search/?text={@}'
-        },
-        currency: {
-          template: 'https://ya.ru/search/?text={@}'
-        }
-      }
-    },
-    qwant: {
-      name: 'Qwant',
-      bgColor: {
-        type: 'solid',
-        color: '#5992f7'
-      },
-      textColor: '#000',
-      types: {
-        query: {
-          template: 'https://www.qwant.com/?q={$}'
-        },
-        calculator: {
-          template: 'https://www.qwant.com/?q={@}'
-        },
-        currency: {
-          template: 'https://www.qwant.com/?q={@}'
-        }
-      }
-    },
-    bing: {
-      name: 'Bing',
-      bgColor: {
-        type: 'gradient',
-        gradientType: 'linear',
-        colors: ['#3ab0f1', '#2351dd', '#40d1da']
-      },
-      textColor: '#e8e8e8',
-      types: {
-        query: {
-          template: 'https://www.bing.com/search?q={$}'
-        },
-        calculator: {
-          template: 'https://www.bing.com/search?q={@}'
-        },
-        currency: {
-          template: 'https://www.bing.com/search?q={@}'
-        }
-      }
-    },
-    brave: {
-      name: 'Brave',
-      bgColor: {
-        type: 'gradient',
-        gradientType: 'linear',
-        colors: ['#FB542B', '#343546']
-      },
-      textColor: '#e8e8e8',
-      types: {
-        query: {
-          template: 'https://search.brave.com/search?q={$}'
-        },
-        calculator: {
-          template: 'https://search.brave.com/search?q={@}'
-        },
-        currency: {
-          template: 'https://search.brave.com/search?q={@}'
         }
       }
     }

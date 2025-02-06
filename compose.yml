@@ -1,0 +1,7 @@
+services:
+  chevron-test:
+    image: nginx:alpine
+    volumes:
+      - /workspaces/chevron-build:/usr/share/nginx/html
+    ports:
+      - "80:80"
