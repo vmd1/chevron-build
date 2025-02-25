@@ -464,8 +464,8 @@ window.CONFIG = {
         '2fa',
         '2fauth'
       ],
-      url: 'https://2fauth.kmnet.uk',
-      normalisedURL: '2fauth.kmnet.uk',
+      url: 'https://2fauth.example.com',
+      normalisedURL: '2fauth.example.com',
       bgColor: {
         type: 'gradient',
         angle: 70,
@@ -483,8 +483,8 @@ window.CONFIG = {
         'man',
         'manage'
       ],
-      url: 'https://manage.kmnet.uk',
-      normalisedURL: 'manage.kmnet.uk',
+      url: 'https://manage.example.com',
+      normalisedURL: 'manage.example.com',
       bgColor: {
         type: 'gradient',
         angle: 70,
@@ -502,8 +502,8 @@ window.CONFIG = {
         'dash',
         'dashboard'
       ],
-      url: 'https://dashboard.kmnet.uk',
-      normalisedURL: 'dashboard.kmnet.uk',
+      url: 'https://dashboard.example.com',
+      normalisedURL: 'dashboard.example.com',
       bgColor: {
         type: 'gradient',
         angle: 70,
@@ -578,8 +578,8 @@ window.CONFIG = {
         'val',
         'valentine'
       ],
-      url: 'https://valentines.advent.cards.kh.kmnet.uk',
-      normalisedURL: 'valentines.advent.cards.kh.kmnet.uk',
+      url: 'https://valentines.advent.cards.example.com',
+      normalisedURL: 'valentines.advent.cards.example.com',
       bgColor: {
         type: 'gradient',
         angle: 70,
